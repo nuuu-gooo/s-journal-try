@@ -9,7 +9,14 @@ export const ChooseWeek = () => {
         return (
           <button
             onClick={() => setCurrentWeek(week.id)}
-            className="p-4 mr-8"
+            className={`${
+              currentWeek === week.id && "bg-[#5847af] text-white "
+            }                p-4
+              border-solid
+              rounded
+              border-[#5847af]
+
+              `}
             key={week.id}
           >
             {week.name}

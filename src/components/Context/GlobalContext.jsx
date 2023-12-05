@@ -130,13 +130,11 @@ export const GlobalContextProvider = ({ children }) => {
   const [weeks, setWeeks] = useState(weeksInitial);
   const [days, setDays] = useState(daysInitial);
   const [subjects, setSubjects] = useState(subjectsInitial);
-  const [nameSurnameTable, setNameSurnameTable] = useState(
-    names_surnames_table_row
-  );
+
   const [grades, setGrades] = useState({});
 
   const [currentWeek, setCurrentWeek] = useState("week-id-1");
-  const [currentSubject, setCurrentSubject] = useState("");
+  const [currentSubject, setCurrentSubject] = useState("subject-id-3");
   const [students, setStudents] = useState([]);
   useEffect(() => {
     if (currentWeek) {
@@ -153,7 +151,6 @@ export const GlobalContextProvider = ({ children }) => {
     const id = `${studentId}_${subjectId}_${week}_${day}`;
     setGrades((prevGrades) => {
       const newGrades = { ...prevGrades, [id]: grade };
-      newGrades[id] = grade;
 
       console.log(currentWeek);
       return newGrades;
@@ -175,7 +172,6 @@ export const GlobalContextProvider = ({ children }) => {
         setCurrentWeek,
         setCurrentSubject,
         currentSubject,
-        nameSurnameTable,
         students,
         setStudents,
         getGrade,

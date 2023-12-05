@@ -2,9 +2,17 @@ import { GlobalContext } from "../Context/GlobalContext";
 import { useContext } from "react";
 
 export const Table = () => {
-  const { days, students } = useContext(GlobalContext);
+  const {
+    weeks,
+    days,
+    currentSubject,
+    currentWeek,
+    students,
+    getGrade,
+    setGrade,
+  } = useContext(GlobalContext);
   return (
-    <table>
+    <table className="mt-[1rem]">
       <tbody>
         <tr>
           <th>სახელი</th>
@@ -18,12 +26,27 @@ export const Table = () => {
             <tr key={student.id}>
               <td>{student.name}</td>
               <td>{student.lastName}</td>
-              {days.map(() => {
+              {days.map((days) => {
                 return (
                   <td className="items-center">
                     <input
+                      value={getGrade(
+                        student.studentID,
+                        currentSubject,
+                        currentWeek,
+                        days.id
+                      )}
+                      onChange={(event) =>
+                        setGrade(
+                          student.studentID,
+                          currentSubject,
+                          currentWeek,
+                          days.id,
+                          event.target.value
+                        )
+                      }
                       className="border-none outline-none bg-[transparent] text-center"
-                      type="text"
+                      type="number"
                     />
                   </td>
                 );

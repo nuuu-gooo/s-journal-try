@@ -3,7 +3,8 @@ import { GlobalContext } from "../Context/GlobalContext";
 import { Modal } from "../Modal/Modal";
 
 export const ChooseSubject = () => {
-  const { subjects } = useContext(GlobalContext);
+  const { subjects, setCurrentSubject, currentSubject } =
+    useContext(GlobalContext);
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const ModalClose = () => {
@@ -13,7 +14,13 @@ export const ChooseSubject = () => {
     <div>
       {subjects.map((subject) => {
         return (
-          <button className="p-4 mr-8" key={subject.id}>
+          <button
+            onClick={() => setCurrentSubject(subject.id)}
+            className={`${
+              currentSubject === subject.id && " text-white bg-[#5847af] "
+            } p-4 mr-8 border-solid rounded border-[#5847af] `}
+            key={subject.id}
+          >
             {subject.name}
           </button>
         );
