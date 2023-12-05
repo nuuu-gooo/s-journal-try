@@ -15,6 +15,7 @@ export const ChooseWeek = () => {
               border-solid
               rounded
               border-[#5847af]
+              mr-8
 
               `}
             key={week.id}
@@ -23,7 +24,6 @@ export const ChooseWeek = () => {
           </button>
         );
       })}
-      {console.log(currentWeek)}
     </div>
   );
 };

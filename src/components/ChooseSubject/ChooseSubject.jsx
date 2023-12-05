@@ -18,7 +18,7 @@ export const ChooseSubject = () => {
             onClick={() => setCurrentSubject(subject.id)}
             className={`${
               currentSubject === subject.id && " text-white bg-[#5847af] "
-            } p-4 mr-8 border-solid rounded border-[#5847af] `}
+            } p-4 mr-8 border-solid rounded border-[##5847af] `}
             key={subject.id}
           >
             {subject.name}

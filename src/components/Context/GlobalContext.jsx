@@ -9,16 +9,9 @@ const weeksInitial = [
     id: "week-id-3",
     name: "მესამე კვირა",
   },
-];
-
-const names_surnames_table_row = [
   {
-    label: "სახელი",
-    id: "name-id-1",
-  },
-  {
-    label: "გვარი",
-    id: "name-id-2",
+    id: "week-id-4",
+    name: "მეოთხე კვირა",
   },
 ];
 
@@ -34,6 +27,10 @@ const subjectsInitial = [
   {
     id: "subject-id-3",
     name: "გერმანული",
+  },
+  {
+    id: "subject-id-4",
+    name: "ფრანგული",
   },
 ];
 
@@ -113,6 +110,31 @@ const daysInitial = [
     day: "პარასკევი",
     weekID: "week-id-3",
   },
+  {
+    id: "day-16",
+    day: "ორშაბათი",
+    weekID: "week-id-4",
+  },
+  {
+    id: "day-17",
+    day: "სამშაბათი",
+    weekID: "week-id-4",
+  },
+  {
+    id: "day-18",
+    day: "ოთხშაბათი",
+    weekID: "week-id-4",
+  },
+  {
+    id: "day-19",
+    day: "ხუთშაბათი",
+    weekID: "week-id-4",
+  },
+  {
+    id: "day-20",
+    day: "პარასკევი",
+    weekID: "week-id-4",
+  },
 ];
 
 export const GlobalContext = createContext({
@@ -134,7 +156,7 @@ export const GlobalContextProvider = ({ children }) => {
   const [grades, setGrades] = useState({});
 
   const [currentWeek, setCurrentWeek] = useState("week-id-1");
-  const [currentSubject, setCurrentSubject] = useState("subject-id-3");
+  const [currentSubject, setCurrentSubject] = useState("subject-id-1");
   const [students, setStudents] = useState([]);
   useEffect(() => {
     if (currentWeek) {
@@ -151,13 +173,9 @@ export const GlobalContextProvider = ({ children }) => {
     const id = `${studentId}_${subjectId}_${week}_${day}`;
     setGrades((prevGrades) => {
       const newGrades = { ...prevGrades, [id]: grade };
-
-      console.log(currentWeek);
       return newGrades;
     });
   };
-
-  console.log(students);
 
   return (
     <GlobalContext.Provider

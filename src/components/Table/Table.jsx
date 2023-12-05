@@ -23,13 +23,14 @@ export const Table = () => {
         </tr>
         {students.map((student) => {
           return (
-            <tr key={student.id}>
+            <tr key={student.studentID}>
               <td>{student.name}</td>
               <td>{student.lastName}</td>
               {days.map((days) => {
                 return (
-                  <td className="items-center">
+                  <td key={days.id} className="items-center">
                     <input
+                      placeholder="Enter Number"
                       value={getGrade(
                         student.studentID,
                         currentSubject,
