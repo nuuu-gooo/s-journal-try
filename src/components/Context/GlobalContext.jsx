@@ -136,7 +136,7 @@ export const GlobalContextProvider = ({ children }) => {
   const [grades, setGrades] = useState({});
 
   const [currentWeek, setCurrentWeek] = useState("week-id-1");
-  const [currentSubject, setCurrentSubject] = useState("subject-id-3");
+  const [currentSubject, setCurrentSubject] = useState("");
   const [students, setStudents] = useState([]);
   useEffect(() => {
     if (currentWeek) {
@@ -155,9 +155,12 @@ export const GlobalContextProvider = ({ children }) => {
       const newGrades = { ...prevGrades, [id]: grade };
       newGrades[id] = grade;
 
+      console.log(currentWeek);
       return newGrades;
     });
   };
+
+  console.log(students);
 
   return (
     <GlobalContext.Provider

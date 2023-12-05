@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ChooseSubject } from "./components/ChooseSubject/ChooseSubject";
 import { ChooseWeek } from "./components/ChooseWeek/ChooseWeek";
+import { Table } from "./components/Table/Table";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <ChooseWeek />
         </div>
       </div>
+      <Table />
     </div>
   );
 }
