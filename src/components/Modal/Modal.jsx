@@ -24,31 +24,31 @@ export const Modal = ({ visibility, closeModal }) => {
     <div>
       <div className="overlay">
         <div className="modal-wrapper">
-          <div className="modal-container bg-white border-none flex-col p-10 w-[250px] flex justify-center items-center  border-black">
-            <h3>Add Student</h3>
+          <div className="modal-container bg-white border-none flex-col p-10 w-[400px] h-[250px] flex justify-center items-center  border-black">
+            <p>ახალი მოსწავლის დამატება</p>
             <input
               onChange={(e) => setFirstName(e.target.value)}
-              placeholder="Enter First Name"
+              placeholder="სტუდენტის სახელი"
               type="text"
-              className="w-full p-1"
+              className="w-full p-3 outline-none"
             />
             <input
               onChange={(e) => setLastName(e.target.value)}
-              placeholder="Enter Name"
+              placeholder=" სტუდენტის გვარი"
               type="text"
-              className="w-full p-1 mt-3"
+              className="w-full p-3 mt-3 outline-none"
             />{" "}
             <button
               onClick={closeModal}
-              className="absolute top-3 right-7 p-2 w-[40px] cursor-pointer hover:opacity-40"
+              className="absolute bg-[red] text-white border-none top-3 right-7 p-2 w-[40px] cursor-pointer hover:opacity-40"
             >
               X
             </button>
             <button
               onClick={() => CreateNewStudent()}
-              className="w-full p-2 mt-3 cursor-pointer"
+              className="w-full p-3 mt-7 cursor-pointer bg-[#5847af] text-white border-none rounded hover:opacity-50"
             >
-              Add
+              დამატება
             </button>
           </div>
         </div>

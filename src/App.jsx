@@ -5,12 +5,14 @@ import { Table } from "./components/Table/Table";
 
 function App() {
   return (
-    <div className=" w-[70%] m-auto pt-[3rem]">
-      <div className="flex justify-between items-center">
+    <div className=" w-[80%] m-auto pt-[3rem]">
+      <div className="flex  justify-between items-center">
         <div className="">
+          <p>საგანი</p>
           <ChooseSubject />
         </div>
         <div className="">
+          <p>ფილტრი</p>
           <ChooseWeek />
         </div>
       </div>

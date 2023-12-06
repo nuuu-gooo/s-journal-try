@@ -30,7 +30,7 @@ export const Table = () => {
                 return (
                   <td key={days.id} className="items-center">
                     <input
-                      placeholder="Enter Number"
+                      placeholder="-"
                       value={getGrade(
                         student.studentID,
                         currentSubject,

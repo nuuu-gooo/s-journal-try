@@ -16,10 +16,12 @@ export const ChooseSubject = () => {
         return (
           <button
             onClick={() => setCurrentSubject(subject.id)}
-            className={`${
-              currentSubject === subject.id && " text-white bg-[#5847af] "
-            } p-4 mr-8 border-solid rounded border-[##5847af] `}
             key={subject.id}
+            className={`${
+              currentSubject === subject.id
+                ? "text-white bg-[#5847af] p-3 mr-5 cursor-pointer rounded border-[#5847af]"
+                : "bg-white p-3 mr-5 border-solid border-black rounded cursor-pointer"
+            } "p-3"`}
           >
             {subject.name}
           </button>
@@ -27,9 +29,9 @@ export const ChooseSubject = () => {
       })}
       <button
         onClick={() => setIsModalVisible(true)}
-        className="absolute top-[80%] cursor-pointer right-[75%] p-3 w-[200px]"
+        className="absolute top-[80%] cursor-pointer right-[70%] bg-[#5847af] text-white border-none rounded p-4 hover:opacity-50 w-[300px]"
       >
-        Add Student
+        ახალი მოსწავლის დამატება
       </button>
       <Modal visibility={isModalVisible} closeModal={ModalClose} />
     </div>

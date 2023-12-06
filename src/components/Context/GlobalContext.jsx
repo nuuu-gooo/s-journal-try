@@ -9,10 +9,6 @@ const weeksInitial = [
     id: "week-id-3",
     name: "მესამე კვირა",
   },
-  {
-    id: "week-id-4",
-    name: "მეოთხე კვირა",
-  },
 ];
 
 const subjectsInitial = [
@@ -27,10 +23,6 @@ const subjectsInitial = [
   {
     id: "subject-id-3",
     name: "გერმანული",
-  },
-  {
-    id: "subject-id-4",
-    name: "ფრანგული",
   },
 ];
 
@@ -109,31 +101,6 @@ const daysInitial = [
     id: "day-15",
     day: "პარასკევი",
     weekID: "week-id-3",
-  },
-  {
-    id: "day-16",
-    day: "ორშაბათი",
-    weekID: "week-id-4",
-  },
-  {
-    id: "day-17",
-    day: "სამშაბათი",
-    weekID: "week-id-4",
-  },
-  {
-    id: "day-18",
-    day: "ოთხშაბათი",
-    weekID: "week-id-4",
-  },
-  {
-    id: "day-19",
-    day: "ხუთშაბათი",
-    weekID: "week-id-4",
-  },
-  {
-    id: "day-20",
-    day: "პარასკევი",
-    weekID: "week-id-4",
   },
 ];
 
