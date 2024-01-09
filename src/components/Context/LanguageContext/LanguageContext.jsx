@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 import { IntlProvider } from "react-intl";
 import en from "../../../Languages/en.json";
 import de from "../../../Languages/de.json";

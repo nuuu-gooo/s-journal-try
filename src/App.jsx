@@ -10,16 +10,23 @@ function App() {
     <div className=" w-[80%] m-auto pt-[3rem]">
       <div className="flex  justify-between items-center">
         <div className="left">
-          <FormattedMessage id="subject" />
+          <p>
+            <FormattedMessage id="subject" />
+          </p>
 
           <ChooseSubject />
         </div>
 
-        <button onClick={toggleLanguage}>
+        <button
+          className="p-3 w-[10%] bg-[transparent] border-solid rounded-2xl cursor-pointer hover:opacity-50"
+          onClick={toggleLanguage}
+        >
           <FormattedMessage id="btn-language" />
         </button>
         <div className="">
-          <FormattedMessage id="filter" />
+          <p>
+            <FormattedMessage id="filter" />
+          </p>
           <ChooseWeek />
         </div>
       </div>

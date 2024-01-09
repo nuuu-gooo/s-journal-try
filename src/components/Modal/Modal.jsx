@@ -5,6 +5,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 export const Modal = ({ visibility, closeModal }) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  const intl = useIntl();
 
   const { setStudents } = useContext(GlobalContext);
   if (!visibility) {
@@ -23,7 +24,6 @@ export const Modal = ({ visibility, closeModal }) => {
     closeModal();
   };
 
-  const intl = useIntl();
   return (
     <div>
       <div className="overlay">
