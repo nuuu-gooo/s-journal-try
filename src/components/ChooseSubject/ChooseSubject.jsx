@@ -1,7 +1,8 @@
 import { useContext, useState } from "react";
 import { GlobalContext } from "../Context/GlobalContext";
 import { Modal } from "../Modal/Modal";
-
+import { LanguageContext } from "../Context/LanguageContext/LanguageContext";
+import { useIntl, FormattedMessage } from "react-intl";
 export const ChooseSubject = () => {
   const { subjects, setCurrentSubject, currentSubject } =
     useContext(GlobalContext);
@@ -10,6 +11,8 @@ export const ChooseSubject = () => {
   const ModalClose = () => {
     setIsModalVisible(false);
   };
+
+  const { toggleLanguage } = useContext(LanguageContext);
   return (
     <div>
       {subjects.map((subject) => {
@@ -31,8 +34,9 @@ export const ChooseSubject = () => {
         onClick={() => setIsModalVisible(true)}
         className="absolute top-[80%] cursor-pointer right-[70%] bg-[#5847af] text-white border-none rounded p-4 hover:opacity-50 w-[300px]"
       >
-        ახალი მოსწავლის დამატება
+        <FormattedMessage id="add.new.student" />
       </button>
+
       <Modal visibility={isModalVisible} closeModal={ModalClose} />
     </div>
   );

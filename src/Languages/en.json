@@ -11,5 +11,10 @@
   "tuesday": "Tuesday",
   "wednesday": "Wednesday",
   "thursday": "Thursday",
-  "friday": "Friday"
+  "friday": "Friday",
+  "btn-language": "🇩🇪",
+  "filter": "Filter",
+  "subject": "Subject",
+  "add.new.student": "Add new Student",
+  "add": "Add"
 }

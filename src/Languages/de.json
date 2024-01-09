@@ -11,5 +11,10 @@
   "tuesday": "Dienstag",
   "wednesday": "Mittwoch",
   "thursday": "Donnerstag",
-  "friday": "Freitag"
+  "friday": "Freitag",
+  "btn-language": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+  "filter": "Filter",
+  "subject": "Schulfach",
+  "add.new.student": "Schüler hinzufügen",
+  "add": "Hinzufügen"
 }

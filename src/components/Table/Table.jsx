@@ -1,3 +1,4 @@
+import { FormattedMessage } from "react-intl";
 import { GlobalContext } from "../Context/GlobalContext";
 import { useContext } from "react";
 
@@ -15,8 +16,12 @@ export const Table = () => {
     <table className="mt-[1rem]">
       <tbody>
         <tr>
-          <th>სახელი</th>
-          <th>გვარი</th>
+          <th>
+            <FormattedMessage id="firstName" />
+          </th>
+          <th>
+            <FormattedMessage id="lastName" />
+          </th>
           {days.map((day) => {
             return <th key={day.id}>{day.day}</th>;
           })}

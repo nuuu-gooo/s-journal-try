@@ -1,9 +1,11 @@
 import { useState, useContext } from "react";
 import { GlobalContext } from "../Context/GlobalContext";
 import { v4 as uuidv4 } from "uuid";
+import { FormattedMessage, useIntl } from "react-intl";
 export const Modal = ({ visibility, closeModal }) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+
   const { setStudents } = useContext(GlobalContext);
   if (!visibility) {
     return null;
@@ -20,21 +22,25 @@ export const Modal = ({ visibility, closeModal }) => {
     setLastName("");
     closeModal();
   };
+
+  const intl = useIntl();
   return (
     <div>
       <div className="overlay">
         <div className="modal-wrapper">
           <div className="modal-container bg-white border-none flex-col p-10 w-[400px] h-[250px] flex justify-center items-center  border-black">
-            <p>ახალი მოსწავლის დამატება</p>
+            <p>
+              <FormattedMessage id="add.new.student" />
+            </p>
             <input
               onChange={(e) => setFirstName(e.target.value)}
-              placeholder="სტუდენტის სახელი"
+              placeholder={intl.formatMessage({ id: "firstName" })}
               type="text"
               className="w-full p-3 outline-none"
             />
             <input
               onChange={(e) => setLastName(e.target.value)}
-              placeholder=" სტუდენტის გვარი"
+              placeholder={intl.formatMessage({ id: "lastName" })}
               type="text"
               className="w-full p-3 mt-3 outline-none"
             />{" "}
@@ -48,7 +54,7 @@ export const Modal = ({ visibility, closeModal }) => {
               onClick={() => CreateNewStudent()}
               className="w-full p-3 mt-7 cursor-pointer bg-[#5847af] text-white border-none rounded hover:opacity-50"
             >
-              დამატება
+              <FormattedMessage id="add" />
             </button>
           </div>
         </div>

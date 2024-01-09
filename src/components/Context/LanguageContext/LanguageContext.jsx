@@ -15,7 +15,7 @@ export const destrucutredJSONLanguages = { en, de };
 export const LanguageContextProvider = ({ children }) => {
   const [locale, setLocale] = useState(LANGUAGES.GERMAN);
 
-  const toggleLangauge = () => {
+  const toggleLanguage = () => {
     if (locale === LANGUAGES.ENGLISH) {
       setLocale(LANGUAGES.GERMAN);
     } else if (locale === LANGUAGES.GERMAN) {
@@ -25,7 +25,7 @@ export const LanguageContextProvider = ({ children }) => {
 
   console.log(locale);
   return (
-    <LanguageContext.Provider value={{ locale, setLocale, toggleLangauge }}>
+    <LanguageContext.Provider value={{ locale, setLocale, toggleLanguage }}>
       <IntlProvider
         messages={destrucutredJSONLanguages[locale]}
         locale={locale}
