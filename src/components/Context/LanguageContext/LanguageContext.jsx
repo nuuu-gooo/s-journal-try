@@ -13,7 +13,7 @@ export const LANGUAGES = {
 export const destrucutredJSONLanguages = { en, de };
 
 export const LanguageContextProvider = ({ children }) => {
-  const [locale, setLocale] = useState(LANGUAGES.GERMAN);
+  const [locale, setLocale] = useState(LANGUAGES.ENGLISH);
 
   const toggleLanguage = () => {
     if (locale === LANGUAGES.ENGLISH) {
